@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #Setup instruction \
+\
+#setup Sensor\
+Open Thonny\
+Connect RP 2040\
+Start main.py script \
+If its working properly, you should be seeing a quick succession of values in the console \
+You can change the sampling rate to taste by changing the sampling_period parameter. Though 250hz works best \
+\
+#setup python \
+Open ECG_reader.py script \
+Detect the serial ports being used\
+Fill in correct serial ports in code\
+Fill in the correct file path for the stress_state.txt file\
+You can change the recording time for the calibration and testing loop by adjusting the corresponding max_duration variable -> the longer the recording time the more accurate the HRV \
+\
+#Set up unity \
+Install unity \
+Launch the StressPopUp.unity  \
+\
+\
+#Running the test \
+Start Thonny\
+Start unity environment \
+Attach the ground electrode and grab the steering wheel, lightly touching the electrodes on the steering wheel \
+Start python code (works best for me via the debugging function)\
+If an error concerning scale length for the neurokit function appears, you signal is bad. \
+First, a calibration cycle is ran, then the test loop starts running indefinitely, outputting stress detected, no stress detected, or bad signal quality. The output then is printed into the stress_state.txt file which is checked by the c# code in unity.\
+When stress is detected, the message should show in unity, when no stress is detected it should disappear}
