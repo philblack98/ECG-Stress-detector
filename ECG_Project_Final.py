@@ -63,8 +63,8 @@ print(f"Mean Signal Value: {mean_signal_value}")
 #set thresholds 
 HRC = int(ECG_intervalrelatedc['ECG_Rate_Mean'].iloc[0])
 HRVC = int(ECG_intervalrelatedc['HRV_RMSSD'].iloc[0])
-HR_threshold = 40 ##HRC+ 0.25* HRC
-HRV_threshold =  3000 ##HRVC-50
+HR_threshold = HRC+ 15
+HRV_threshold =  HRVC-HRVC*0.25 
 
 #End calibration 
 print(HR_threshold)
